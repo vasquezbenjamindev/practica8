@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    background-color: bisque;
+
+}
+.contenedor{
+    width: 700px;
+    max-width: 100%;
+    margin: 100px auto;
+    margin-top: 2rem;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: 1fr 2fr;
+    gap: 1em;
+}
+.hijo{
+    background-color: red;
+    padding: 22px;
+    border: bisque 1px solid;
+    border-radius: 8px; 
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+.hijo:hover{
+    background-color: wheat;
+}
+.parte-1{
+    background-color: orange;
+}
+.parte-2{
+    background-color: blueviolet;
+}
+.parte-3{
+    background-color: greenyellow;
+}
+.parte-4{
+    background-color: tomato;
+    grid-column: 1/4;
+
+}
+.parte-5{
+    background-color: red;
+    grid-column: 1/3;
+}
+.parte-6{
+    background-color: goldenrod;
+}
+.parte-7{
+    background-color: thistle;
+}
+.parte-8{
+    background-color: turquoise;
+    grid-column: 2/4;
+}
+.parte-9{
+    background-color: firebrick;
+    grid-column: 1/4;
+}
+@media screen and (max-width:600px){
+    body{
+        background-color: brown;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+    .parte-4{
+        grid-column: 2/3;
+    }
+    .parte-5{
+        grid-column: 1/3;
+    }
+    .parte-6{
+        grid-column: 1/2;
+    }
+    .parte-8{
+        grid-column: 1/3;
+    }
+    .parte-9{
+        grid-column: 1/3;
+    }
+}
+@media screen and (max-width:450px){
+    body{
+        background-color: whitesmoke;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .parte-1{
+        grid-column: 1/3;
+    }
+    .parte-2, .parte-3, .parte-4, .parte-6, .parte-7{
+        grid-column: 1/3;
+    }
+
+}
